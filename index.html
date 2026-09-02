@@ -1,0 +1,1222 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ESM PERÚ COOPERATIVAS — Escuela Superior de Microfinanzas</title>
+    <meta
+      name="description"
+      content="Escuela especializada en educación cooperativa, financiera y empresarial. Aprender para decidir, decidir para crecer, crecer para transformar."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./dist/output.css" />
+  </head>
+
+  <body class="font-body text-navy antialiased">
+    <!-- ===================== LOADER ===================== -->
+    <div
+      id="loader"
+      class="fixed inset-0 z-[100] bg-paper flex items-center justify-center"
+    >
+      <img
+        src="./assets/logo.jpg"
+        alt="Cargando ESM PERÚ"
+        class="loader-logo h-20 w-20 md:h-24 md:w-24 rounded-full object-cover shadow-lg"
+      />
+    </div>
+
+    <!-- ===================== HEADER / NAV ===================== -->
+    <header
+      class="sticky top-0 z-50 bg-paper/95 backdrop-blur border-b border-line"
+    >
+      <div class="max-w-7xl mx-auto px-5 md:px-8">
+        <div class="flex items-center justify-between h-16 md:h-20">
+          <a
+            href="#inicio"
+            class="flex items-center gap-3 font-display font-semibold text-lg md:text-xl tracking-tight"
+          >
+            <img
+              src="./assets/logo.jpg"
+              alt="ESM PERÚ"
+              class="h-10 w-10 rounded-full object-cover"
+            />
+            ESM <span class="text-sky">PERÚ COOPERATIVAS</span>
+          </a>
+
+          <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
+            <a href="#quienes-somos" class="nav-link">Quiénes somos</a>
+            <a href="#modelo" class="nav-link">Nuestro modelo</a>
+            <a href="#escuelas" class="nav-link">Escuelas</a>
+            <a href="#impacto" class="nav-link">Impacto</a>
+            <a
+              href="#contacto"
+              class="inline-flex items-center px-4 py-2 rounded-full bg-navy text-paper hover:bg-slate transition-colors"
+            >
+              Contacto
+            </a>
+          </nav>
+
+          <button
+            id="menu-btn"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            class="lg:hidden p-2 -mr-2"
+          >
+            <svg
+              id="icon-open"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+            <svg
+              id="icon-close"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 hidden"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="lg:hidden hidden border-t border-line bg-paper"
+      >
+        <nav class="flex flex-col px-5 py-4 gap-1 text-base font-medium">
+          <a href="#quienes-somos" class="py-3 border-b border-line/70"
+            >Quiénes somos</a
+          >
+          <a href="#modelo" class="py-3 border-b border-line/70"
+            >Nuestro modelo</a
+          >
+          <a href="#escuelas" class="py-3 border-b border-line/70">Escuelas</a>
+          <a href="#impacto" class="py-3 border-b border-line/70">Impacto</a>
+          <a href="#contacto" class="py-3 text-sky">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ===================== HERO ===================== -->
+    <section id="inicio" class="relative overflow-hidden">
+      <div
+        class="ledger-lines absolute inset-0 opacity-60 pointer-events-none"
+      ></div>
+
+      <!-- formas flotantes decorativas -->
+      <div
+        class="float-blob absolute -top-10 -left-16 w-72 h-72 rounded-full bg-sky/15 blur-3xl pointer-events-none"
+      ></div>
+      <div
+        class="float-blob-slow absolute top-1/3 -right-20 w-80 h-80 rounded-full bg-slate/15 blur-3xl pointer-events-none"
+      ></div>
+
+      <div
+        class="relative max-w-7xl mx-auto px-5 md:px-8 pt-16 pb-20 md:pt-24 md:pb-28 grid lg:grid-cols-[1.15fr_0.85fr] gap-12 items-center"
+      >
+        <div class="text-center lg:text-left">
+          <p
+            class="reveal font-mono text-xs md:text-sm tracking-[0.25em] uppercase text-slate mb-6"
+            style="transition-delay: 0.05s"
+          >
+            Escuela Superior de Microfinanzas
+          </p>
+          <h1
+            class="reveal font-display font-semibold text-4xl sm:text-5xl md:text-6xl leading-[1.05] tracking-tight"
+            style="transition-delay: 0.15s"
+          >
+            Educación que
+            <span class="italic text-sky">transforma</span>
+          </h1>
+          <p
+            class="reveal mt-8 text-lg md:text-xl font-display italic text-navy/80 leading-snug"
+            style="transition-delay: 0.25s"
+          >
+            Aprender para decidir. Decidir para crecer. Crecer para transformar.
+          </p>
+          <p
+            class="reveal mt-6 text-base md:text-lg text-navy/70 max-w-xl mx-auto lg:mx-0"
+            style="transition-delay: 0.35s"
+          >
+            Transformamos conocimiento cooperativo, financiero y empresarial en
+            mejores decisiones, organizaciones sostenibles y desarrollo
+            económico y social.
+          </p>
+          <div
+            class="reveal mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+            style="transition-delay: 0.45s"
+          >
+            <a
+              href="#contacto"
+              class="px-7 py-3.5 rounded-full bg-navy text-paper font-medium hover:bg-slate transition-colors"
+            >
+              Solicitar información
+            </a>
+            <a
+              href="#modelo"
+              class="px-7 py-3.5 rounded-full border border-navy/30 font-medium hover:border-navy transition-colors"
+            >
+              Conoce nuestro modelo
+            </a>
+          </div>
+        </div>
+
+        <!-- Placeholder de imagen del hero: reemplazar cuando elijan la foto -->
+        <div class="reveal" style="transition-delay: 0.2s">
+          <div
+            class="relative aspect-[4/5] max-w-sm mx-auto rounded-[2rem] border-2 border-dashed border-slate/40 bg-slate/5 flex flex-col items-center justify-center gap-3 text-center px-6"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-10 w-10 text-slate/50"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="1.4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 16l4.5-4.5a2 2 0 012.8 0L16 16m-2-2l1.5-1.5a2 2 0 012.8 0L20 14M4 8h.01M6 4h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2z"
+              />
+            </svg>
+            <p class="text-sm text-navy/50 max-w-[16rem]">
+              Espacio reservado para la foto principal
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== QUIÉNES SOMOS ===================== -->
+    <section id="quienes-somos" class="bg-navy text-paper">
+      <div
+        class="max-w-6xl mx-auto px-5 md:px-8 py-20 md:py-28 grid md:grid-cols-[0.9fr_1.1fr] gap-12 md:gap-20 items-start"
+      >
+        <div class="reveal">
+          <p
+            class="font-mono text-xs tracking-[0.25em] uppercase text-sky mb-4"
+          >
+            Quiénes somos
+          </p>
+          <h2
+            class="font-display font-semibold text-3xl md:text-5xl leading-tight"
+          >
+            ESM PERÚ COOPERATIVAS
+          </h2>
+        </div>
+        <div class="reveal space-y-6 text-paper/85 text-lg leading-relaxed">
+          <p>
+            Somos una escuela especializada en educación cooperativa, financiera
+            y empresarial. Desarrollamos capacidades en socios, directivos,
+            funcionarios, trabajadores, emprendedores y jóvenes para que puedan
+            tomar mejores decisiones, fortalecer sus organizaciones y contribuir
+            al desarrollo de sus comunidades.
+          </p>
+          <p
+            class="font-display italic text-xl text-sky/90 border-l-2 border-sky pl-5"
+          >
+            No vendemos cursos. Desarrollamos capacidades para que socios,
+            directivos y emprendedores tomen mejores decisiones y construyan
+            organizaciones sostenibles.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== NUESTRO MODELO ===================== -->
+    <section id="modelo" class="max-w-7xl mx-auto px-5 md:px-8 py-20 md:py-28">
+      <div class="reveal max-w-3xl mb-16 md:mb-20">
+        <p
+          class="font-mono text-xs tracking-[0.25em] uppercase text-slate mb-4"
+        >
+          Nuestro modelo
+        </p>
+        <h2
+          class="font-display font-semibold text-3xl md:text-5xl leading-tight mb-6"
+        >
+          Modelo de Educación Cooperativa ESM
+        </h2>
+        <p class="text-lg text-navy/70 leading-relaxed">
+          Integramos doctrina cooperativa, educación financiera, gestión
+          empresarial y liderazgo para desarrollar capacidades aplicables a la
+          realidad de las personas y organizaciones — pasando del conocimiento a
+          la aplicación práctica.
+        </p>
+      </div>
+
+      <!-- ===== 5 Pilares: tarjetas con hover-reveal ===== -->
+      <div class="mb-24 md:mb-32">
+        <h3
+          class="font-display font-semibold text-2xl md:text-3xl mb-10 md:mb-14"
+        >
+          Los 5 pilares
+        </h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <!-- Pilar 1 -->
+          <div
+            class="pilar-card group relative h-72 rounded-2xl overflow-hidden bg-gradient-to-br from-navy to-slate cursor-default"
+            tabindex="0"
+          >
+            <svg
+              class="pilar-icon absolute inset-0 m-auto h-20 w-20 text-paper opacity-20"
+              viewBox="0 0 64 64"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="24" cy="26" r="10" />
+              <circle cx="40" cy="26" r="10" />
+              <circle cx="32" cy="40" r="10" />
+            </svg>
+            <div
+              class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-navy/95 via-navy/60 to-transparent"
+            >
+              <p
+                class="font-display font-semibold text-lg text-paper leading-snug"
+              >
+                Identidad<br />Cooperativa
+              </p>
+              <p class="pilar-desc text-sm text-paper/85 leading-relaxed">
+                Principios, valores, doctrina, participación, gobernanza y ética
+                cooperativa.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pilar 2 -->
+          <div
+            class="pilar-card group relative h-72 rounded-2xl overflow-hidden bg-gradient-to-br from-sky to-teal cursor-default"
+            tabindex="0"
+          >
+            <svg
+              class="pilar-icon absolute inset-0 m-auto h-20 w-20 text-paper opacity-20"
+              viewBox="0 0 64 64"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="32" cy="32" r="20" />
+              <path d="M32 20v24M26 26h8a5 5 0 010 10h-8" />
+            </svg>
+            <div
+              class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-navy/90 via-navy/50 to-transparent"
+            >
+              <p
+                class="font-display font-semibold text-lg text-paper leading-snug"
+              >
+                Educación<br />Financiera
+              </p>
+              <p class="pilar-desc text-sm text-paper/85 leading-relaxed">
+                Ahorro, planificación, crédito, inversión, endeudamiento y
+                gestión de riesgos.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pilar 3 -->
+          <div
+            class="pilar-card group relative h-72 rounded-2xl overflow-hidden bg-gradient-to-br from-teal to-navy cursor-default"
+            tabindex="0"
+          >
+            <svg
+              class="pilar-icon absolute inset-0 m-auto h-20 w-20 text-paper opacity-20"
+              viewBox="0 0 64 64"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polygon points="32,10 54,22 54,42 32,54 10,42 10,22" />
+            </svg>
+            <div
+              class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-navy/95 via-navy/60 to-transparent"
+            >
+              <p
+                class="font-display font-semibold text-lg text-paper leading-snug"
+              >
+                Gestión y<br />Sostenibilidad
+              </p>
+              <p class="pilar-desc text-sm text-paper/85 leading-relaxed">
+                Finanzas, riesgos, cartera, liquidez, control interno y
+                transformación digital.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pilar 4 -->
+          <div
+            class="pilar-card group relative h-72 rounded-2xl overflow-hidden bg-gradient-to-br from-slate to-navy cursor-default"
+            tabindex="0"
+          >
+            <svg
+              class="pilar-icon absolute inset-0 m-auto h-20 w-20 text-paper opacity-20"
+              viewBox="0 0 64 64"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="32" cy="32" r="21" />
+              <polygon
+                points="32,20 37,30 27,30"
+                fill="currentColor"
+                stroke="none"
+              />
+              <polygon
+                points="32,44 27,34 37,34"
+                fill="currentColor"
+                stroke="none"
+                opacity="0.5"
+              />
+            </svg>
+            <div
+              class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-navy/95 via-navy/60 to-transparent"
+            >
+              <p
+                class="font-display font-semibold text-lg text-paper leading-snug"
+              >
+                Liderazgo y<br />Gobernanza
+              </p>
+              <p class="pilar-desc text-sm text-paper/85 leading-relaxed">
+                Comunicación, negociación, toma de decisiones, gobernanza y
+                ética.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pilar 5 -->
+          <div
+            class="pilar-card group relative h-72 rounded-2xl overflow-hidden bg-gradient-to-br from-navy to-teal cursor-default"
+            tabindex="0"
+          >
+            <svg
+              class="pilar-icon absolute inset-0 m-auto h-20 w-20 text-paper opacity-20"
+              viewBox="0 0 64 64"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M32 8l6 18h18L42 38l6 18-16-12-16 12 6-18L8 26h18z" />
+            </svg>
+            <div
+              class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-navy/95 via-navy/60 to-transparent"
+            >
+              <p
+                class="font-display font-semibold text-lg text-paper leading-snug"
+              >
+                Emprendimiento<br />e Impacto
+              </p>
+              <p class="pilar-desc text-sm text-paper/85 leading-relaxed">
+                Modelos de negocio, marketing, ventas, innovación, MYPES e
+                inclusión financiera.
+              </p>
+            </div>
+          </div>
+        </div>
+        <p class="text-xs text-navy/40 mt-4">
+          Pasa el cursor (o toca en móvil) sobre cada tarjeta para ver el
+          detalle.
+        </p>
+      </div>
+
+      <!-- ===== Niveles de formación: carrusel ===== -->
+      <div class="mb-24 md:mb-32">
+        <h3 class="font-display font-semibold text-2xl md:text-3xl mb-3">
+          Niveles de formación
+        </h3>
+        <p class="text-navy/60 mb-10 md:mb-14">
+          Una ruta de desarrollo progresivo, socio a consultor.
+        </p>
+
+        <div id="niveles-carousel" class="relative">
+          <div class="relative h-[22rem] sm:h-72 overflow-hidden rounded-3xl">
+            <!-- Slide 1 -->
+            <div
+              class="nivel-slide absolute inset-0 transition-opacity duration-500"
+              data-slide="0"
+            >
+              <div
+                class="grid md:grid-cols-2 gap-6 md:gap-10 items-center h-full bg-navy text-paper rounded-3xl p-8 md:p-12"
+              >
+                <div>
+                  <h4
+                    class="font-display text-2xl md:text-3xl font-semibold mb-3"
+                  >
+                    Socio Cooperativista
+                  </h4>
+                  <p class="text-paper/75">
+                    Educación financiera e identidad cooperativa.
+                  </p>
+                </div>
+                <div
+                  class="nivel-visual relative h-40 md:h-full rounded-2xl overflow-hidden bg-sky/10 flex items-center justify-center"
+                >
+                  <div
+                    class="nivel-photo w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-sky to-slate"
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div
+              class="nivel-slide absolute inset-0 opacity-0 transition-opacity duration-500"
+              data-slide="1"
+            >
+              <div
+                class="grid md:grid-cols-2 gap-6 md:gap-10 items-center h-full bg-navy text-paper rounded-3xl p-8 md:p-12"
+              >
+                <div>
+                  <h4
+                    class="font-display text-2xl md:text-3xl font-semibold mb-3"
+                  >
+                    Líder Cooperativo
+                  </h4>
+                  <p class="text-paper/75">
+                    Liderazgo, gobernanza y participación.
+                  </p>
+                </div>
+                <div
+                  class="nivel-visual relative h-40 md:h-full rounded-2xl overflow-hidden bg-slate/10 flex items-center justify-center"
+                >
+                  <div
+                    class="nivel-photo w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-slate to-navy"
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div
+              class="nivel-slide absolute inset-0 opacity-0 transition-opacity duration-500"
+              data-slide="2"
+            >
+              <div
+                class="grid md:grid-cols-2 gap-6 md:gap-10 items-center h-full bg-navy text-paper rounded-3xl p-8 md:p-12"
+              >
+                <div>
+                  <h4
+                    class="font-display text-2xl md:text-3xl font-semibold mb-3"
+                  >
+                    Gestor Cooperativo
+                  </h4>
+                  <p class="text-paper/75">
+                    Administración, finanzas y gestión de riesgos.
+                  </p>
+                </div>
+                <div
+                  class="nivel-visual relative h-40 md:h-full rounded-2xl overflow-hidden bg-teal/10 flex items-center justify-center"
+                >
+                  <div
+                    class="nivel-photo w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-teal to-slate"
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div
+              class="nivel-slide absolute inset-0 opacity-0 transition-opacity duration-500"
+              data-slide="3"
+            >
+              <div
+                class="grid md:grid-cols-2 gap-6 md:gap-10 items-center h-full bg-navy text-paper rounded-3xl p-8 md:p-12"
+              >
+                <div>
+                  <h4
+                    class="font-display text-2xl md:text-3xl font-semibold mb-3"
+                  >
+                    Especialista Cooperativo
+                  </h4>
+                  <p class="text-paper/75">
+                    Microfinanzas, gestión financiera, tecnología e innovación.
+                  </p>
+                </div>
+                <div
+                  class="nivel-visual relative h-40 md:h-full rounded-2xl overflow-hidden bg-sky/10 flex items-center justify-center"
+                >
+                  <div
+                    class="nivel-photo w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-navy to-sky"
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div
+              class="nivel-slide absolute inset-0 opacity-0 transition-opacity duration-500"
+              data-slide="4"
+            >
+              <div
+                class="grid md:grid-cols-2 gap-6 md:gap-10 items-center h-full bg-navy text-paper rounded-3xl p-8 md:p-12"
+              >
+                <div>
+                  <h4
+                    class="font-display text-2xl md:text-3xl font-semibold mb-3"
+                  >
+                    Consultor Cooperativo
+                  </h4>
+                  <p class="text-paper/75">
+                    Estrategia, transformación organizacional y acompañamiento.
+                  </p>
+                </div>
+                <div
+                  class="nivel-visual relative h-40 md:h-full rounded-2xl overflow-hidden bg-slate/10 flex items-center justify-center"
+                >
+                  <div
+                    class="nivel-photo w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-slate to-teal"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controles -->
+          <div class="flex items-center justify-center gap-4 mt-6">
+            <button
+              id="nivel-prev-btn"
+              aria-label="Nivel anterior"
+              class="h-10 w-10 rounded-full bg-paper border border-line shadow flex items-center justify-center hover:bg-sky hover:text-paper transition-colors"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+            <button
+              id="nivel-next-btn"
+              aria-label="Siguiente nivel"
+              class="h-10 w-10 rounded-full bg-paper border border-line shadow flex items-center justify-center hover:bg-sky hover:text-paper transition-colors"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== Metodología: barras verticales que se expanden ===== -->
+      <div>
+        <h3
+          class="font-display font-semibold text-2xl md:text-3xl mb-10 md:mb-14"
+        >
+          Metodología ESM
+        </h3>
+
+        <div
+          id="metodologia-bars"
+          class="flex h-80 sm:h-72 gap-2 rounded-2xl overflow-hidden"
+        >
+          <div
+            class="metodologia-bar relative bg-navy text-paper cursor-pointer transition-all duration-500 ease-out flex flex-col justify-end p-5 overflow-hidden"
+            style="flex-basis: 25%"
+          >
+            <span class="font-mono text-xs text-sky mb-2">01</span>
+            <p class="font-display font-semibold text-lg whitespace-nowrap">
+              Aprender
+            </p>
+            <p
+              class="metodologia-desc text-sm text-paper/70 mt-2 max-w-xs opacity-0 transition-opacity duration-300 delay-150"
+            >
+              Adquirir conocimientos y herramientas.
+            </p>
+          </div>
+
+          <div
+            class="metodologia-bar relative bg-navy text-paper cursor-pointer transition-all duration-500 ease-out flex flex-col justify-end p-5 overflow-hidden"
+            style="flex-basis: 25%"
+          >
+            <span class="font-mono text-xs text-sky mb-2">02</span>
+            <p class="font-display font-semibold text-lg whitespace-nowrap">
+              Practicar
+            </p>
+            <p
+              class="metodologia-desc text-sm text-paper/70 mt-2 max-w-xs opacity-0 transition-opacity duration-300 delay-150"
+            >
+              Aplicar lo aprendido mediante casos y simulaciones.
+            </p>
+          </div>
+
+          <div
+            class="metodologia-bar relative bg-navy text-paper cursor-pointer transition-all duration-500 ease-out flex flex-col justify-end p-5 overflow-hidden"
+            style="flex-basis: 25%"
+          >
+            <span class="font-mono text-xs text-sky mb-2">03</span>
+            <p class="font-display font-semibold text-lg whitespace-nowrap">
+              Decidir
+            </p>
+            <p
+              class="metodologia-desc text-sm text-paper/70 mt-2 max-w-xs opacity-0 transition-opacity duration-300 delay-150"
+            >
+              Resolver problemas financieros, empresariales y cooperativos.
+            </p>
+          </div>
+
+          <div
+            class="metodologia-bar relative bg-navy text-paper cursor-pointer transition-all duration-500 ease-out flex flex-col justify-end p-5 overflow-hidden"
+            style="flex-basis: 25%"
+          >
+            <span class="font-mono text-xs text-sky mb-2">04</span>
+            <p class="font-display font-semibold text-lg whitespace-nowrap">
+              Transformar
+            </p>
+            <p
+              class="metodologia-desc text-sm text-paper/70 mt-2 max-w-xs opacity-0 transition-opacity duration-300 delay-150"
+            >
+              Generar mejores resultados para personas y comunidades.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ESCUELAS ===================== -->
+    <section id="escuelas" class="bg-slate/10">
+      <div class="max-w-7xl mx-auto px-5 md:px-8 py-20 md:py-28">
+        <p
+          class="font-mono text-xs tracking-[0.25em] uppercase text-slate mb-4"
+        >
+          Escuelas
+        </p>
+        <h2
+          class="font-display font-semibold text-3xl md:text-5xl leading-tight mb-14 md:mb-16 max-w-2xl"
+        >
+          Cuatro escuelas, un mismo propósito
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+          <div class="reveal bg-paper rounded-2xl p-8 border border-line">
+            <p class="font-display font-semibold text-xl mb-3">
+              Escuela de Educación Cooperativa
+            </p>
+            <p class="text-navy/70 leading-relaxed">
+              Formación en doctrina, principios, valores, participación y
+              gobernanza cooperativa.
+            </p>
+          </div>
+          <div class="reveal bg-paper rounded-2xl p-8 border border-line">
+            <p class="font-display font-semibold text-xl mb-3">
+              Escuela de Finanzas y Microfinanzas
+            </p>
+            <p class="text-navy/70 leading-relaxed">
+              Formación especializada en finanzas, créditos, riesgos y gestión
+              financiera.
+            </p>
+          </div>
+          <div class="reveal bg-paper rounded-2xl p-8 border border-line">
+            <p class="font-display font-semibold text-xl mb-3">
+              Escuela de Gestión Empresarial
+            </p>
+            <p class="text-navy/70 leading-relaxed">
+              Desarrollo de capacidades en administración, emprendimiento,
+              marketing, ventas y negocios.
+            </p>
+          </div>
+          <div class="reveal bg-paper rounded-2xl p-8 border border-line">
+            <p class="font-display font-semibold text-xl mb-3">
+              Escuela de Liderazgo Cooperativo
+            </p>
+            <p class="text-navy/70 leading-relaxed">
+              Formación de líderes y directivos en liderazgo, innovación y
+              habilidades de gestión.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== IMPACTO: carrusel circular ===================== -->
+    <section id="impacto" class="max-w-6xl mx-auto px-5 md:px-8 py-20 md:py-28">
+      <p class="font-mono text-xs tracking-[0.25em] uppercase text-slate mb-4">
+        Impacto
+      </p>
+      <h2
+        class="font-display font-semibold text-3xl md:text-5xl leading-tight mb-4 max-w-2xl"
+      >
+        Del conocimiento al desarrollo
+      </h2>
+      <p class="text-lg text-navy/70 max-w-2xl mb-16 md:mb-20">
+        Así se traduce la educación cooperativa en resultados reales, un paso a
+        la vez.
+      </p>
+
+      <div id="impacto-arc" class="relative h-72 sm:h-80 max-w-2xl mx-auto">
+        <!-- arco decorativo -->
+        <svg
+          class="absolute inset-0 w-full h-full pointer-events-none"
+          viewBox="0 0 600 200"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M20,170 Q300,-20 580,170"
+            fill="none"
+            stroke="#DCE4F0"
+            stroke-width="2"
+          />
+        </svg>
+
+        <!-- tarjeta anterior (izquierda, difuminada) -->
+        <div
+          id="arc-prev-preview"
+          class="absolute left-0 top-1/2 -translate-y-1/2 flex flex-col items-center gap-2 opacity-50 blur-[1px] scale-90"
+        >
+          <div class="w-16 h-16 rounded-full bg-slate/30"></div>
+          <p
+            id="arc-prev-label"
+            class="text-xs text-navy/50 text-center w-24"
+          ></p>
+        </div>
+
+        <!-- botón anterior -->
+        <button
+          id="arc-prev-btn"
+          aria-label="Anterior"
+          class="absolute left-8 sm:left-16 top-[62%] -translate-y-1/2 h-9 w-9 rounded-full bg-paper border border-line shadow flex items-center justify-center hover:bg-sky hover:text-paper transition-colors z-10"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+        </button>
+
+        <!-- círculo central: gira, a la espera de la foto -->
+        <div
+          class="absolute left-1/2 top-8 -translate-x-1/2 flex flex-col items-center gap-4"
+        >
+          <div
+            class="coin-spin w-30 h-30 sm:w-32 sm:h-32 rounded-full bg-gradient-to-br from-navy to-sky shadow-lg flex items-center justify-center"
+          >
+            <span
+              class="text-paper/70 text-[10px] uppercase tracking-wider text-center px-2"
+              >Foto<br />próximamente</span
+            >
+          </div>
+          <p
+            id="arc-active-label"
+            class="font-display font-semibold text-lg sm:text-xl text-center max-w-[14rem]"
+          ></p>
+        </div>
+
+        <!-- botón siguiente -->
+        <button
+          id="arc-next-btn"
+          aria-label="Siguiente"
+          class="absolute right-8 sm:right-16 top-[62%] -translate-y-1/2 h-9 w-9 rounded-full bg-paper border border-line shadow flex items-center justify-center hover:bg-sky hover:text-paper transition-colors z-10"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </button>
+
+        <!-- tarjeta siguiente (derecha, difuminada) -->
+        <div
+          id="arc-next-preview"
+          class="absolute right-0 top-1/2 -translate-y-1/2 flex flex-col items-center gap-2 opacity-50 blur-[1px] scale-90"
+        >
+          <div class="w-16 h-16 rounded-full bg-sky/30"></div>
+          <p
+            id="arc-next-label"
+            class="text-xs text-navy/50 text-center w-24"
+          ></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CITA DESTACADA ===================== -->
+    <section class="bg-navy text-paper ledger-lines">
+      <div class="max-w-4xl mx-auto px-5 md:px-8 py-20 md:py-28 text-center">
+        <p class="reveal font-display italic text-2xl md:text-4xl leading-snug">
+          "Formamos personas para fortalecer cooperativas, desarrollamos
+          cooperativas para transformar comunidades."
+        </p>
+        <p
+          class="reveal mt-8 font-mono text-xs tracking-[0.25em] uppercase text-sky"
+        >
+          ESM PERÚ COOPERATIVAS — Educación que transforma
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACTO ===================== -->
+    <section
+      id="contacto"
+      class="max-w-4xl mx-auto px-5 md:px-8 py-20 md:py-28"
+    >
+      <div class="text-center mb-12">
+        <p
+          class="font-mono text-xs tracking-[0.25em] uppercase text-slate mb-4"
+        >
+          Contacto
+        </p>
+        <h2
+          class="font-display font-semibold text-3xl md:text-5xl leading-tight mb-5"
+        >
+          ¿Listos para transformar conocimiento en resultados?
+        </h2>
+        <p class="text-lg text-navy/70 max-w-xl mx-auto">
+          Conoce nuestras alternativas de formación y descubre cómo ESM PERÚ
+          puede ayudarte a fortalecer tu organización.
+        </p>
+      </div>
+
+      <!-- Formulario vía Web3Forms: reemplaza YOUR_ACCESS_KEY_HERE por tu clave real (gratis en web3forms.com) -->
+      <form
+        action="https://api.web3forms.com/submit"
+        method="POST"
+        class="max-w-xl mx-auto space-y-5"
+      >
+        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+        <input
+          type="hidden"
+          name="subject"
+          value="Nueva solicitud de información — ESM PERÚ"
+        />
+
+        <div>
+          <label for="nombre" class="block text-sm font-medium mb-1.5"
+            >Nombre completo</label
+          >
+          <input
+            id="nombre"
+            type="text"
+            name="nombre"
+            required
+            class="w-full rounded-xl border border-line bg-paper px-4 py-3 focus:border-sky outline-none transition-colors"
+          />
+        </div>
+
+        <div>
+          <label for="email" class="block text-sm font-medium mb-1.5"
+            >Correo electrónico</label
+          >
+          <input
+            id="email"
+            type="email"
+            name="email"
+            required
+            class="w-full rounded-xl border border-line bg-paper px-4 py-3 focus:border-sky outline-none transition-colors"
+          />
+        </div>
+
+        <div>
+          <label for="organizacion" class="block text-sm font-medium mb-1.5"
+            >Organización (opcional)</label
+          >
+          <input
+            id="organizacion"
+            type="text"
+            name="organizacion"
+            class="w-full rounded-xl border border-line bg-paper px-4 py-3 focus:border-sky outline-none transition-colors"
+          />
+        </div>
+
+        <div>
+          <label for="mensaje" class="block text-sm font-medium mb-1.5"
+            >Cuéntanos qué necesitas</label
+          >
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            rows="4"
+            required
+            class="w-full rounded-xl border border-line bg-paper px-4 py-3 focus:border-sky outline-none transition-colors"
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          class="w-full py-3.5 rounded-full bg-navy text-paper font-medium hover:bg-slate transition-colors"
+        >
+          Solicitar información
+        </button>
+      </form>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="border-t border-line">
+      <div
+        class="max-w-7xl mx-auto px-5 md:px-8 py-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-navy/60"
+      >
+        <p class="font-display font-semibold text-navy">
+          ESM <span class="text-sky">PERÚ COOPERATIVAS</span>
+        </p>
+        <p>
+          © <span id="year"></span> Escuela Superior de Microfinanzas. Todos los
+          derechos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // ===== Loader =====
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          document.getElementById("loader").classList.add("loader-hidden");
+        }, 500);
+      });
+
+      // ===== Año dinámico =====
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // ===== Menú móvil =====
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const iconOpen = document.getElementById("icon-open");
+      const iconClose = document.getElementById("icon-close");
+
+      menuBtn.addEventListener("click", () => {
+        const isOpen = !mobileMenu.classList.contains("hidden");
+        mobileMenu.classList.toggle("hidden");
+        iconOpen.classList.toggle("hidden");
+        iconClose.classList.toggle("hidden");
+        menuBtn.setAttribute("aria-expanded", String(!isOpen));
+      });
+
+      mobileMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          iconOpen.classList.remove("hidden");
+          iconClose.classList.add("hidden");
+          menuBtn.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      // ===== Animación de aparición al hacer scroll =====
+      const revealEls = document.querySelectorAll(".reveal");
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.15 },
+        );
+        revealEls.forEach((el) => observer.observe(el));
+      } else {
+        revealEls.forEach((el) => el.classList.add("is-visible"));
+      }
+
+      // ===== Carrusel de Niveles de formación =====
+      (function () {
+        const slides = document.querySelectorAll(".nivel-slide");
+        let current = 0;
+        let timer;
+
+        function goTo(index) {
+          slides[current].classList.add("opacity-0");
+          current = index;
+          slides[current].classList.remove("opacity-0");
+        }
+
+        function next() {
+          goTo((current + 1) % slides.length);
+        }
+        function prev() {
+          goTo((current - 1 + slides.length) % slides.length);
+        }
+
+        function restart() {
+          clearInterval(timer);
+          timer = setInterval(next, 4200);
+        }
+
+        document
+          .getElementById("nivel-prev-btn")
+          .addEventListener("click", () => {
+            prev();
+            restart();
+          });
+        document
+          .getElementById("nivel-next-btn")
+          .addEventListener("click", () => {
+            next();
+            restart();
+          });
+
+        const container = document.getElementById("niveles-carousel");
+        container.addEventListener("mouseenter", () => clearInterval(timer));
+        container.addEventListener("mouseleave", restart);
+
+        goTo(0);
+        restart();
+      })();
+
+      // ===== Carrusel circular de Impacto =====
+
+      (function () {
+        const steps = [
+          "Educación",
+          "Mejores decisiones",
+          "Gestión sostenible",
+          "Desarrollo económico y social",
+        ];
+        let active = 0;
+        let timer;
+
+        const activeLabel = document.getElementById("arc-active-label");
+        const prevLabel = document.getElementById("arc-prev-label");
+        const nextLabel = document.getElementById("arc-next-label");
+        const prevBtn = document.getElementById("arc-prev-btn");
+        const nextBtn = document.getElementById("arc-next-btn");
+        const prevPreview = document.getElementById("arc-prev-preview");
+        const nextPreview = document.getElementById("arc-next-preview");
+
+        function render() {
+          const isFirst = active === 0;
+          const isLast = active === steps.length - 1;
+
+          activeLabel.textContent = steps[active];
+          prevLabel.textContent = isFirst ? "" : steps[active - 1];
+          nextLabel.textContent = isLast ? "" : steps[active + 1];
+
+          prevBtn.classList.toggle("hidden", isFirst);
+          prevPreview.classList.toggle("hidden", isFirst);
+          nextBtn.classList.toggle("hidden", isLast);
+          nextPreview.classList.toggle("hidden", isLast);
+
+          if (isLast) clearInterval(timer); // ya no hay a dónde avanzar solo
+        }
+
+        function goNext() {
+          if (active < steps.length - 1) {
+            active++;
+            render();
+          }
+        }
+        function goPrev() {
+          if (active > 0) {
+            active--;
+            render();
+          }
+        }
+
+        function restart() {
+          clearInterval(timer);
+          timer = setInterval(goNext, 3800);
+        }
+
+        nextBtn.addEventListener("click", () => {
+          goNext();
+          restart();
+        });
+        prevBtn.addEventListener("click", () => {
+          goPrev();
+          restart();
+        });
+
+        const arcContainer = document.getElementById("impacto-arc");
+        arcContainer.addEventListener("mouseenter", () => clearInterval(timer));
+        arcContainer.addEventListener("mouseleave", restart);
+
+        render();
+        restart();
+      })();
+
+      // ===== Metodología: barras que se expanden =====
+      (function () {
+        const bars = document.querySelectorAll(".metodologia-bar");
+
+        bars.forEach((bar) => {
+          bar.addEventListener("mouseenter", () => {
+            bars.forEach((b) => {
+              if (b === bar) {
+                b.style.flexBasis = "55%";
+                b.classList.add("bg-sky");
+                b.classList.remove("bg-navy");
+                b.querySelector(".metodologia-desc").classList.remove(
+                  "opacity-0",
+                );
+              } else {
+                b.style.flexBasis = "15%";
+                b.classList.add("bg-navy");
+                b.classList.remove("bg-sky");
+                b.querySelector(".metodologia-desc").classList.add("opacity-0");
+              }
+            });
+          });
+        });
+
+        document
+          .getElementById("metodologia-bars")
+          .addEventListener("mouseleave", () => {
+            bars.forEach((b) => {
+              b.style.flexBasis = "25%";
+              b.classList.add("bg-navy");
+              b.classList.remove("bg-sky");
+              b.querySelector(".metodologia-desc").classList.add("opacity-0");
+            });
+          });
+      })();
+    </script>
+  </body>
+</html>

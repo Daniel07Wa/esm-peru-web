@@ -1,0 +1,13 @@
+{
+  "name": "esm-peru-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Página institucional ESM PERÚ - Escuela Superior de Microfinanzas",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.13"
+  }
+}

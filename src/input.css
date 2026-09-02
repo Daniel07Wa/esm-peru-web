@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { background-color: #F7F9FC; }
+
+/* Textura sutil de líneas de libreta */
+.ledger-lines {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 43px,
+    #DCE4F0 44px
+  );
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; }
+}
+
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: -4px;
+  height: 1.5px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+.nav-link:hover::after { transform: scaleX(1); }
+
+:focus-visible {
+  outline: 2.5px solid #1CA7D8;
+  outline-offset: 3px;
+}
+
+/* ===== Hero: formas flotantes de fondo ===== */
+@keyframes float-blob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(20px, -24px) scale(1.06); }
+}
+.float-blob {
+  animation: float-blob 9s ease-in-out infinite;
+}
+.float-blob-slow {
+  animation: float-blob 13s ease-in-out infinite;
+  animation-delay: -4s;
+}
+
+/* ===== Pilares: revelado de descripción en hover ===== */
+.pilar-card .pilar-desc {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, opacity 0.3s ease, margin 0.35s ease;
+}
+.pilar-card:hover .pilar-desc,
+.pilar-card:focus-within .pilar-desc {
+  max-height: 8rem;
+  opacity: 1;
+  margin-top: 0.6rem;
+}
+.pilar-card .pilar-icon {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.pilar-card:hover .pilar-icon {
+  transform: scale(1.08) rotate(-3deg);
+  opacity: 0.28;
+}
+
+/* ===== Niveles: foto que se centra/agranda en hover ===== */
+.nivel-photo {
+  transition: transform 0.5s ease;
+  transform: translateX(10%) scale(0.94);
+}
+.nivel-visual:hover .nivel-photo {
+  transform: translateX(0) scale(1.08);
+}
+
+/* ===== Círculo giratorio (placeholder de foto) ===== */
+
+
+
+/* ===== Loader de carga ===== */
+#loader {
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+#loader.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+@keyframes loader-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.08); opacity: 0.75; }
+}
+.loader-logo {
+  animation: loader-pulse 1.3s ease-in-out infinite;
+}
